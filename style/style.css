@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* { /* tiramos todas as margens da tela para nos mesmos editarmos */
+    padding:0;
+    margin:0;
+    }
+
+
+:root{ /* variaveis */
+    --branco-primeiro:#FFFFFF;
+    --cinza-segundo: #C0C0C0;
+    --preto-terceiro: #00030C;
+    --botao-azul: #167BF7;
+    --botao-azul-efeito: #62a3f1;
+    --font-primaria: "Inter", serif;
+      
+}
+
+body{
+    background-color: var(--preto-terceiro); /* cor de fundo*/
+    color: var(--branco-primeiro);
+    font-family: var(--font-primaria);
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+ 
+}
+
+.primario { /* aqui sera editado tudo que tem dentro da classe apresentacao, qualquer coisa que eu coloque na frente desta classe com virgula serao outras classes ou itnes, no exemplo abaixo colocamos a classe apresentacao e o style da imagem*/
+    
+    background-image: url(/asset/fundo.png);
+    align-items: center;
+    background-size: contain;
+    background-repeat: repeat-x;
+
+    
+}
+
+
+
+.font-style { /* estamos definindo a fonte da classe apresentacao junto com a classe font-style*/
+    font-family: var(--font-primaria);
+}
+
+
+.container__buton{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    font-family: var(--font-primaria);
+    color: var(--branco-primeiro);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+
+}
+
+.buton__secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-primeiro);
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-segundo);
+    text-align: center;
+    
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color: var(--cinza-segundo);
+}
+
+.secundario__buton{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.dispositivos__lista{  /* aqui transforma os itens dessa classe em flex container, e todos os itens em flex itens e ele ja vem com a direcao padrao row que e uma direcao em linha */
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /* remove o estilo da lista */
+    margin: 5em 0; /* uma margin pra cima e pra baixo e zero pros lasdos */
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivo__titulo{
+    font-size: 48px;
+    color: (var(--branco-primeiro));
+}
+
+.lista__item{
+    font-size: 32px;
+    color: (var(--branco-primeiro));
+}
+
+.rodape{
+    text-align: center;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    color: var(--branco-primeiro);
+    margin-bottom: 1em;
+    gap: 30px;
+    font-size: var(--font-primaria);
+    margin: 2em 0;
+}
+
+.lista__link{
+    font-size: 16px;
+    text-decoration: none;  
+    
+}
+
+.lista__link a:visited{ /* remove o estilo de visitado deixando uma cor de ja clicado no link */
+    color: var(--branco-primeiro); 
+}
+
+.lista__link a:hover{
+    color: var(--cinza-segundo);
+    
+}
+
+.lista__link a:active{
+    color: var(--botao-azul);
+}
+
+
+
+.rodape__texto{
+    font-style: var(--font-primaria);
+    margin-bottom: 1em;
+    color: var(--cinza-segundo);
+    font-size: 14px;
+    margin: 5em 0;
+}
+
+.container__buton:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--preto-terceiro);
+}
+
